@@ -10,4 +10,10 @@ Downloading files:
       if(!file.exists("data")){
         dir.create("data")
       }
-  Getting data from the internet-download.file()
+  Getting data from the internet-download.file():
+    fileURL <- "https://YourURLLink"
+    download.file(fileURL, destfile="./data/camera.csv/", method="curl") #this method is only needed for Mac when it is https instead of http
+    list.files("./data")
+    #also keep track of the date you downloaded the data:
+      dataDownloaded<-date()
+      dataDownloaded
